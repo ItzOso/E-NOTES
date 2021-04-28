@@ -9,6 +9,7 @@ const downloadButton = document.getElementById("download-notes")
 // Deletes all of the text/notes
 clearButton.onclick = function() {
   notes.value = "";
+  notesTitle.value = "";
 }
 
 // Adds the notes title to the header
