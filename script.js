@@ -59,16 +59,20 @@ load()
 downloadButton.onclick = download
 
 function download() {
-  let filename = "e-notes-" + notesTitle.value;
-  let element = document.createElement("a");
-  element.setAttribute("href", "data:text/plain;charset=utf-8," + encodeURIComponent(notes.value));
-  element.setAttribute("download", filename);
+  if (notes.Value & notesTitle.value != "") {
+    let filename = "e-notes-" + notesTitle.value;
+    let element = document.createElement("a");
+    element.setAttribute("href", "data:text/plain;charset=utf-8," + encodeURIComponent(notes.value));
+    element.setAttribute("download", filename);
 
-  element.style.display = "none";
+    element.style.display = "none";
 
-  document.body.appendChild(element);
+    document.body.appendChild(element);
 
-  element.click();
+    element.click();
 
-  document.body.removeChild(element);
+    document.body.removeChild(element);
+  } else {
+    alert("You cannot download nothing(put something in the notes area :P)");
+  }
 }
