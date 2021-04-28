@@ -59,7 +59,7 @@ load()
 downloadButton.onclick = download
 
 function download() {
-  if (notes.Value & notesTitle.value != "") {
+  if (notes.value & notesTitle.value != "") {
     let filename = "e-notes-" + notesTitle.value;
     let element = document.createElement("a");
     element.setAttribute("href", "data:text/plain;charset=utf-8," + encodeURIComponent(notes.value));
