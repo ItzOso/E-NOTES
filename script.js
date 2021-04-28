@@ -73,6 +73,6 @@ function download() {
 
     document.body.removeChild(element);
   } else {
-    alert("You cannot download nothing(put something in the notes area :P)");
+    alert("You cannot download nothing(make sure you have a title and some notes :P)");
   }
 }
