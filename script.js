@@ -59,7 +59,6 @@ load()
 downloadButton.onclick = download
 
 function download() {
-  if (notes.value & notesTitle.value != "") {
     let filename = "e-notes-" + notesTitle.value;
     let element = document.createElement("a");
     element.setAttribute("href", "data:text/plain;charset=utf-8," + encodeURIComponent(notes.value));
@@ -72,7 +71,4 @@ function download() {
     element.click();
 
     document.body.removeChild(element);
-  } else {
-    alert("You cannot download nothing(make sure you have a title and some notes :P)");
-  }
 }
